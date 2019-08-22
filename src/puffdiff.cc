@@ -4,7 +4,12 @@
 
 #include "puffin/src/include/puffin/puffdiff.h"
 
+#ifdef __APPLE__
+#include <machine/endian.h>
+#define htobe32(x) OSSwapHostToBigInt32(x)
+#else
 #include <endian.h>
+#endif
 #include <inttypes.h>
 #include <unistd.h>
 
