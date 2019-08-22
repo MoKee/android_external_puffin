@@ -19,11 +19,6 @@ cc_defaults {
         "-Werror",
         "-Wextra",
     ],
-    target: {
-        darwin: {
-            enabled: false,
-        },
-    },
 }
 
 cc_library_static {
